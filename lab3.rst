@@ -1,5 +1,8 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
+:date: 2019-09-08 09:00
+:summary: Повторение работы в командной строке Linux
+:status: published
+
+.. default-role:: code
 
 
 ﻿# Работа с файлами
