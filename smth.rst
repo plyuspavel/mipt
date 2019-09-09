@@ -1,8 +1,8 @@
-Повторение работы в командной строке Linux
+fdgsdf
 ##########################################
 
 :date: 2019-09-08 09:00
-:summary: Повторение работы в командной строке Linux
+:summary: fdsgsfdgsfdgfdg
 :status: published
 
 
