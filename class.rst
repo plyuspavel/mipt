@@ -1,3 +1,26 @@
+Повторение работы в командной строке Linux
+##########################################
+
+:date: 2019-09-08 09:00
+:summary: Повторение работы в командной строке Linux
+:status: published
+
+
+.. default-role:: code
+
+.. raw:: html
+
+	<style>
+	.contents li{
+		list-style:none;
+		padding:0px 0px 0px 2em;
+		margin:0px;
+	}
+	</style>
+
+
+.. contents::
+
 Работа с файлами
 ================
 
