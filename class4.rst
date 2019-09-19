@@ -170,7 +170,7 @@
 ---------------------------------
 
 Простейший случай
------------------
+~~~~~~~~~~~~~~~~~
 
 Как как было сказано выше, стандартная библиотека argparse предназначена для облегчения разбора командной строки. На нее можно возложить проверку переданных параметров: их количество и обозначения, а уже после того, как эта проверка будет выполнена автоматически, использовать полученные параметры в логике своей программы.
 
@@ -185,37 +185,38 @@
    
 Для начала перепишем программу coolprogram.py с единственным параметром так, чтобы она использовала библиотеку argparse. Напомню, что данном случае мы ожидаем следующий синтаксис параметров:
 
-python coolprogram.py [Имя]
+.. code:: python3
+
+   python coolprogram.py [Имя]
 
 Здесь [Имя] является необязательным параметром.
 
 Наша программа с использованием argparse может выглядеть следующим образом:
 
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
- 
-import sys
-import argparse
- 
- 
-def createParser ():
-    parser = argparse.ArgumentParser()
-    parser.add_argument ('name', nargs='?')
- 
-    return parser
- 
- 
-if __name__ == '__main__':
-    parser = createParser()
-    namespace = parser.parse_args()
- 
-    # print (namespace)
- 
-    if namespace.name:
-        print ("Привет, {}!".format (namespace.name) )
-    else:
-        print ("Привет, мир!")
-Исходник
+.. code:: python3
+
+   import sys
+   import argparse
+
+   def createParser ():
+       parser = argparse.ArgumentParser()
+       parser.add_argument ('name', nargs='?')
+
+       return parser
+
+
+   if __name__ == '__main__':
+       parser = createParser()
+       namespace = parser.parse_args()
+
+       # print (namespace)
+
+       if namespace.name:
+           print ("Привет, {}!".format (namespace.name) )
+       else:
+           print ("Привет, мир!")
+
+
 На первый взгляд эта программа работает точно так же, как и раньше, хотя есть отличия, но мы их рассмотрим чуть позже. Пока разберемся с тем, что мы понаписали в программе.
 
 Создание парсера вынесено в отдельную функцию, поскольку эта часть программы в будущем будет сильно изменяться и разрастаться. На строке 9 мы создали экземпляр класса ArgumentParser с параметрами по умолчанию. Что это за параметры, опять же, поговорим чуть позже.
