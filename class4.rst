@@ -252,25 +252,25 @@
 Мы можем изменить значение по умолчанию, что позволит нам несколько сократить программу. Пусть по умолчанию используется слово 'мир', ведь мы его приветствуем, если параметры не переданы. Для этого воспользуемся дополнительным именованным параметром default в методе add_argument.
 
 .. code:: python3
- 
-import sys
-import argparse
- 
- 
-def createParser ():
-    parser = argparse.ArgumentParser()
-    parser.add_argument ('name', nargs='?', default='мир')
- 
-    return parser
- 
- 
-if __name__ == '__main__':
-    parser = createParser()
-    namespace = parser.parse_args (sys.argv[1:])
- 
-    # print (namespace)
- 
-    print ("Привет, {}!".format (namespace.name) )
+
+   import sys
+   import argparse
+
+
+   def createParser ():
+       parser = argparse.ArgumentParser()
+       parser.add_argument ('name', nargs='?', default='мир')
+
+       return parser
+
+
+   if __name__ == '__main__':
+       parser = createParser()
+       namespace = parser.parse_args (sys.argv[1:])
+
+       # print (namespace)
+
+       print ("Привет, {}!".format (namespace.name) )
 
 Программа продолжает работать точно также, как и раньше. Вы, наверное, заметили, что в предыдущем примере в метод parse_args ередаются параметры командной строки из sys.argv. Это сделано для того, чтобы показать, что список параметров мы можем передавать явно, при необходимости мы его можем предварительно обработать, хотя это вряд ли понадобится, ведь почти всю обработку можно возложить на плечи библиотеки argparse.
 
@@ -409,3 +409,5 @@ python coolprogram.py --username Вася
  
 Namespace(name='Вася')
 
+Декораторы
+==========
