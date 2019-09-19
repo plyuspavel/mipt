@@ -32,6 +32,7 @@
 ----------------------------------
 
 Путь для начала у нас есть простейший скрипт на Python. Для определенности назовем скрипт coolprogram.py, это будет классический Hello World, над которым мы будем работать 
+
 .. code:: python3
 
    if __name__ == "__main__":
@@ -43,6 +44,7 @@
 
       $ python coolprogram.py
 или
+
 .. code:: python3
 
       $ python coolprogram.py Вася
