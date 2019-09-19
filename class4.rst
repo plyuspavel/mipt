@@ -12,15 +12,6 @@
 
 .. raw:: html
 
-  <style>
-  .contents li{
-    list-style:none;
-    padding:0px 0px 0px 2em;
-    margin:0px;
-  }
-  </style>
-
-
 .. contents::
 
 Обработка аргументов командной строки. Запуск   программы   с   аргументами
